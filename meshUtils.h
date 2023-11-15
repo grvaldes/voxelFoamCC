@@ -2,13 +2,18 @@
 #define MESHUTILS_H
 
 typedef struct Mesh {
-    float points;
-    int faces;
-    int owner;
-    int neighbours; 
+    int nNodes;
+    int nCells;
+    int nFaces;
+    int nNeigh;
+    float **points;
+    int *cells;
+    int *faces;
+    int *owner;
+    int *neighbour; 
 } Mesh;
 
-Mesh readMeshFile(char* file_in);
-Mesh cellRepetition(Mesh mesh, int dx, int dy, int dz);
+Mesh parseInpFile(char* file_in);
+Mesh cellRepetition(Mesh& mesh, int dx, int dy, int dz);
 
 #endif

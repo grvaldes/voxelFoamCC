@@ -4,7 +4,7 @@
 #include "meshUtils.h"
 #include "fileUtils.h"
  
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     if (argc < 2)
     {
@@ -15,8 +15,8 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    char* file_in = argv[1];
-    char* file_out = argv[2];
+    char *file_in = argv[1];
+    char *file_out = argv[2];
 
     if (strncmp(&argv[1][0],"-h",2) == 0)
     {
